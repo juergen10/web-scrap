@@ -12,5 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('links/link');
 });
+
+Route::get('/link', 'ScrapController@view');
+Route::post('link/scrap', 'ScrapController@scrap');
+
+Route::get('/products', 'ProductController@index');
+Route::get('/products/{product}', 'ProductController@show');
